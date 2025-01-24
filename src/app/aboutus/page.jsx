@@ -23,13 +23,17 @@ const AboutUs=() =>{
               <div className="flex-shrink-0">
                 <FlowerPot className="w-8 h-8 text-[#86C232]" />
               </div>
-              <div>
+              <motion.div
+              initial={{ x: 20, opacity: 0 }}
+              animate={{ x: 0, opacity: 1 }}
+              transition={{ ease: "easeInOut", duration: 0.75 }}
+              >
                 <h3 className="text-xl font-medium mb-2">Plants Care</h3>
                 <p className="text-gray-600">
                   In Aenean purus, pretium sito amet sapien denim moste consectet sedoni urna placerat sodales.service
                   its.
                 </p>
-              </div>
+              </motion.div>
             </div>
 
             <div className="flex gap-4">
@@ -58,7 +62,6 @@ const AboutUs=() =>{
               </div>
             </div>
           </div>
-
           {/* Image Section */}
           <div className="relative rounded-lg overflow-hidden">
             <Image
