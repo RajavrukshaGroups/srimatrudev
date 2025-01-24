@@ -1,0 +1,43 @@
+.overlayDiv {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: absolute; /* Ensure overlay is positioned on top of the content */
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  color: white;
+  z-index: 10;
+}
+
+.overlayText {
+  font-size: 2rem;
+  /* font-weight: bold; */
+  margin-bottom: 20px;
+}
+
+.buttonsDiv {
+  display: flex;
+  gap: 20px;
+}
+
+.button {
+  padding: 10px 20px;
+  font-size: 1rem;
+  font-weight: bold;
+  background-color: #28a745;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s, box-shadow 0.3s;
+  box-shadow: 0px 4px 6px rgba(40, 167, 69, 0.5);
+}
+
+.button:hover {
+  background-color: #218838;
+  box-shadow: 0px 6px 10px rgba(40, 167, 69, 0.7);
+}
