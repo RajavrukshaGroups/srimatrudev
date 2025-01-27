@@ -1,7 +1,16 @@
-.container{
-    background-color:whitesmoke !important;
+.container {
+  background-color: whitesmoke !important;
 }
 
-.contact-title{
-    margin: 3rem;
+.contactTitle {
+  margin: 3rem;
+}
+
+.contactPage {
+  margin: 4rem;
+}
+
+.contactForm {
+  /* margin: auto; */
+  margin-left: 3rem;
 }
