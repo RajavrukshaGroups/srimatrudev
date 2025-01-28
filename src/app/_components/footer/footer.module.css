@@ -1,0 +1,32 @@
+.footerContainer {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    background-color: #333;
+    color: #fff;
+  }
+  
+  .leftColumn {
+    flex: 1;
+  }
+  
+  .middleColumn {
+    flex: 2;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  
+  .rightColumn {
+    flex: 1;
+  }
+  
+  .quickLinksList {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  .quickLinksList li {
+    margin-bottom: 5px;
+  }
+  

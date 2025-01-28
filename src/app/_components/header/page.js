@@ -2,8 +2,8 @@ import styles from "./header.module.css";
 const Header = () => {
   return (
     <div className={styles.mainHeader}>
-      <p>Email:enquiry@srimatrudevelopers.com</p>
-      <p>Call Us:+91 9945646095</p>
+      <p>enquiry@srimatrudevelopers.com</p>
+      <p>+91 9945646095</p>
     </div>
   );
 };
