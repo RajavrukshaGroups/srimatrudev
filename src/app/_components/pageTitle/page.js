@@ -1,4 +1,6 @@
 import styles from "./pagetitle.module.css";
+import Image from "next/image";
+import pageImg from "../assets/bg-pages.jpg";
 
 const PageTitle = ({ title }) => {
   return (

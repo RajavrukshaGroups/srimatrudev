@@ -6,6 +6,7 @@ import {
   faPhone,
   faEnvelope,
 } from "@fortawesome/free-solid-svg-icons";
+import { MapPin, Phone, Mail } from "lucide-react"; // Import Lucide icons
 import contactImg from "../assets/contact.jpg";
 import emailjs from "@emailjs/browser";
 import { useState, useRef } from "react";
@@ -68,26 +69,15 @@ const ContactForm = () => {
       <div className={`${style.contactPage} flex flex-wrap gap-8`}>
         <div className={`${style.contactInfo} flex-1 p-4`}>
           <div className="flex items-start mb-6">
-            <FontAwesomeIcon
-              icon={faHouseUser}
-              // style={{ height: "30px", marginTop: "-5px" }}
-              className="mr-4 text-indigo-600"
-            />
+            <MapPin className="mr-4 text-blue-600 w-6 h-6" />{" "}
             <div>
               <p className="font-bold text-xl">Location:</p>
-              <p className="mt-1 text-gray-700">
-                #35 A, Kowdi, 2nd Floor, 1st Main Road, Chiranjeevi Layout,
-                Hebbal Kempapura, Bengaluru-560024
-              </p>
+              <p className="mt-1 text-gray-700">Hebbal, Bangalore</p>
             </div>
           </div>
 
           <div className="flex items-start mb-6">
-            <FontAwesomeIcon
-              icon={faPhone}
-              style={{ height: "20px", marginTop: "2px" }}
-              className="mr-4 text-indigo-600"
-            />
+            <Phone className="mr-4 text-blue-600 w-6 h-6" />{" "}
             <div>
               <p className="font-bold text-xl">Phone:</p>
               <p className="mt-1 text-gray-700">99 4564 6095</p>
@@ -96,11 +86,7 @@ const ContactForm = () => {
           </div>
 
           <div className="flex items-start">
-            <FontAwesomeIcon
-              icon={faEnvelope}
-              style={{ height: "20px", marginTop: "3px" }}
-              className="mr-4 text-indigo-600"
-            />
+            <Mail className="mr-4 text-blue-600 w-6 h-6" />{" "}
             <div>
               <p className="font-bold text-xl">Email:</p>
               <p className="mt-1 text-gray-700">enquiry@srimatru.com</p>
@@ -159,7 +145,7 @@ const ContactForm = () => {
             ></textarea>
             <button
               type="submit"
-              className="block w-full rounded-md bg-indigo-600 px-4 py-3 text-center text-lg font-semibold text-white shadow-md hover:bg-indigo-500 focus:outline-none focus:ring-2 focus:ring-indigo-400"
+              className="block w-full rounded-md bg-blue-600 px-4 py-3 text-center text-lg font-semibold text-white shadow-md hover:bg-blue-500 focus:outline-none focus:ring-2 focus:ring-indigo-400"
               disabled={isSending}
             >
               {isSending ? "Sending..." : "Let's talk"}

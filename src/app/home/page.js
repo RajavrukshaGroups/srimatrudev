@@ -6,6 +6,7 @@ import styles from "./home.module.css";
 import AboutUs from "../aboutus/page";
 import OverlayText from "../_components/overlayText/page";
 import Testimonials from "../_components/testimonial/page";
+import { InfiniteMovingCardsDemo } from "../_components/infiniteMovingCards/infMovingCardsDemo";
 export default function Home() {
   return (
     <div className={styles.homeContainer}>
@@ -15,7 +16,8 @@ export default function Home() {
         <OverlayText />
       </div>
       <AboutUs />
-      <Testimonials />
+      {/* <Testimonials /> */}
+      <InfiniteMovingCardsDemo />
       <Footer />
     </div>
   );
