@@ -1,5 +1,4 @@
-import React from 'react'
-
+"use client"
 import { Leaf, Droplets, FlowerIcon as FlowerPot, Play } from "lucide-react"
 import Image from "next/image"
 import mainImage from '../assets/img/23.jpg'

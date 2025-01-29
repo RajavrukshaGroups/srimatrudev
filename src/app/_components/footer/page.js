@@ -16,7 +16,7 @@ const Footer = () => {
         {/* Text Content Overlay with Blur and Green Tint */}
         <div className="footer-content-overlay">
           <div className="container mx-auto px-4">
-            <div className="flex flex-wrap text-left lg:text-left mt-6">
+            <div className="flex flex-wrap text-left lg:text-left mt-6 mob-footer">
               {/* Contact Information */}
               <div className="contact-info w-full lg:w-6/12 px-4">
                 <span className="footer-heading">
@@ -53,7 +53,7 @@ const Footer = () => {
 
               {/* Useful Links */}
               <div className="useful-links w-full lg:w-6/12 px-4">
-                <div className="flex flex-wrap items-top mb-6">
+                <div className="flex flex-wrap items-top mb-6 mob-screen">
                   <div className="links-column w-full lg:w-4/12 px-4 ml-auto">
                     <span className="footer-heading">Useful Links</span>
                     <ul className="links-list list-none space-y-2">

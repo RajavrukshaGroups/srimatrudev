@@ -25,7 +25,10 @@ const NavBar = () => {
   return (
     <>
       <div className={`${styles.navbar} ${isScrolled ? styles.scrolled : ""}`}>
-        <h1 className="text-3xl">Srimatru Developers</h1>
+        <h1 className="text-3xl uppercase">
+          <span style={{ color: "#349134" }}>SRI</span>MATRU DEVELOPERS
+        </h1>
+
         <button className={styles.hamburgerButton} onClick={toggleModal}>
           <FontAwesomeIcon icon={faBars} />
         </button>

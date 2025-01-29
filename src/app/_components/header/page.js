@@ -1,9 +1,15 @@
 import styles from "./header.module.css";
+import { Mail, Phone } from 'lucide-react';
+
 const Header = () => {
   return (
     <div className={styles.mainHeader}>
-      <p>enquiry@srimatrudevelopers.com</p>
-      <p>+91 9945646095</p>
+      <p className={styles.contactInfo}>
+        <Mail className={styles.icon} /> enquiry@srimatrudevelopers.com
+      </p>
+      <p className={styles.contactInfo}>
+        <Phone className={styles.icon} /> +91 9945646095
+      </p>
     </div>
   );
 };

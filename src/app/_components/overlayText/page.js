@@ -8,7 +8,7 @@ export default function Text() {
       </h1>
       <div className={styles.buttonsDiv}>
         <button className={styles.button}>About Us</button>
-        <button className={styles.button}>Contact Us</button>
+        <button className={styles.button}>Projects</button>
       </div>
     </div>
   );

@@ -8,7 +8,7 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 10px 20px;
+  padding: 25px 20px;
   color: white;
   position: sticky;
   top: 0;
@@ -28,6 +28,14 @@ body {
 .navLinks {
   display: flex;
   gap: 10px; /* Default gap for small screens */
+}
+
+/* Hover effect for navigation links */
+.navLinks a:hover,
+.modalContent a:hover {
+  color: #4caf50; /* Greenish color */
+  opacity: 0.8; /* Dim effect */
+  transition: color 0.3s ease, opacity 0.3s ease; /* Smooth transition */
 }
 
 /* Large Screen Styles */
@@ -53,6 +61,24 @@ body {
   display: none;
 }
 
+/* Contact Button Styles */
+.contactButton {
+  background-color: #349134; /* Light green background */
+  color: white; /* White text */
+  border: 2px solid white; /* White border */
+  padding: 8px 16px; /* Adjust padding as needed */
+  border-radius: 4px; /* Rounded corners */
+  font-size: 14px; /* Adjust font size as needed */
+  cursor: pointer;
+  transition: background-color 0.3s ease, opacity 0.3s ease; /* Smooth transition */
+}
+
+/* Hover effect for the Contact Us button */
+.contactButton:hover {
+  background-color: #419d41; /* Slightly darker green on hover */
+  opacity: 0.9; /* Slight dim effect */
+}
+
 /* Modal Styles */
 .modal {
   position: fixed;
@@ -75,7 +101,7 @@ body {
 
 .modalContent {
   background-color: black;
-  width: 93%;
+  width: 100%;
   padding: 10px 20px; /* Adjust padding to reduce space */
   display: flex;
   flex-direction: column;
@@ -105,7 +131,7 @@ body {
   font-size: 4rem;
   align-self: flex-end;
   cursor: pointer;
-  margin-right: 1rem;
+  margin-right: -1rem;
   color: white;
 }
 
@@ -113,7 +139,7 @@ body {
   margin-top: -9rem;
 }
 
-.indLink{
+.indLink {
   margin-bottom: 15px;
   margin-top: 15px;
 }
@@ -143,9 +169,6 @@ body {
     justify-content: space-between;
     align-items: center;
   }
-  /* .indDiv{
-    display: block;
-  } */
 }
 
 @media (min-width: 1024px) {
