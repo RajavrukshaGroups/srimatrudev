@@ -9,6 +9,7 @@ export default function projects(){
             <Header/>
             <NavBar/>
             <PageTitle title={pageTitle}/>
+            {/* <Header/> */}
         </div>
     )
 }
