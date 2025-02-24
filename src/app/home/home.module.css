@@ -7,10 +7,10 @@
 .backgroundOverlay {
   position: relative;
   width: 100%;
-  min-height: 100vh;
+  height: 100vh; /* Ensure full height for the background */
   background-image: url("../_components/assets/bg-img-2.jpg");
   background-size: cover;
-  background-position: center top;
+  background-position: center top; /* Center the background */
   background-repeat: no-repeat;
   animation: zoomEffect 10s infinite;
   z-index: 0;
@@ -27,14 +27,6 @@
   z-index: 1;
 }
 
-/* footer {
-  background-color: #fff;
-  padding: 20px;
-  text-align: center;
-  z-index: 2;
-  position: relative;
-} */
-
 @keyframes zoomEffect {
   0% {
     background-size: 100%;
@@ -44,5 +36,19 @@
   }
   100% {
     background-size: 100%;
+  }
+}
+
+@media (max-width: 767px) {
+  .backgroundOverlay {
+    height: 40vh;
+    background-position: bottom;
+  }
+}
+
+@media (max-width: 410px) {
+  .backgroundOverlay {
+    height: 50vh;
+    background-position: bottom;
   }
 }

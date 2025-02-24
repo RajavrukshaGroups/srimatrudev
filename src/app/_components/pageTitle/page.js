@@ -1,10 +1,12 @@
-import styles from "./pagetitle.module.css"
+import styles from "./pagetitle.module.css";
+import Image from "next/image";
+import pageImg from "../assets/bg-pages.jpg";
 
-const PageTitle = () => {
+const PageTitle = ({ title }) => {
   return (
     <div className={styles.pageTitleContainer}>
       <div className={styles.backgroundImage}></div>
-      <h1>Contact Us</h1>
+      <h1>{title}</h1>
     </div>
   );
 };

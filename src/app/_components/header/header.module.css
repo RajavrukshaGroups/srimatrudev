@@ -1,17 +1,32 @@
 .mainHeader {
-    width: 100%;
-    color: white;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 10px 40px;
-    font-size: 14px;
-    z-index: 2;
-    border-bottom: 1px solid rgba(235, 235, 235, 0.9);
+  width: 100%;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 22px;
+  font-size: 14px;
+  z-index: 2;
+  border-bottom: 1px solid rgba(235, 235, 235, 0.9);
+}
+
+.mainHeader p {
+  margin: 0;
+  z-index: 2;
+}
+
+.icon {
+  width: 16px;
+  margin-right: 8px;
+}
+
+.contactInfo {
+  display: flex;
+  align-items: center;
+}
+
+@media (max-width: 768px) {
+  .mainHeader {
+    display: none;
   }
-  
-  .mainHeader p {
-    margin: 0;
-    z-index: 2;
-  }
-  
+}
