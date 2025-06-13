@@ -59,8 +59,8 @@ const ContactForm = () => {
   return (
     <div className={`${style.container} mx-auto p-4`}>
       <div className={`${style.contactTitle} mb-5 text-center`}>
-        <h1 className="text-2xl font-bold">Contact Us</h1>
-        <p className="text-lg">
+        <h1 className="text-2xl font-bold text-black">Contact Us</h1>
+        <p className="text-lg text-black">
           Reach out to us for any inquiries, support, or feedback. We’re here to
           help!
         </p>
@@ -71,7 +71,7 @@ const ContactForm = () => {
           <div className="flex items-start mb-6">
             <MapPin className="mr-4 text-blue-600 w-6 h-6" />{" "}
             <div>
-              <p className="font-bold text-xl">Location:</p>
+              <p className="font-bold text-xl text-black">Location:</p>
               <p className="mt-1 text-gray-700">Hebbal, Bangalore</p>
             </div>
           </div>
@@ -79,7 +79,7 @@ const ContactForm = () => {
           <div className="flex items-start mb-6">
             <Phone className="mr-4 text-blue-600 w-6 h-6" />{" "}
             <div>
-              <p className="font-bold text-xl">Phone:</p>
+              <p className="font-bold text-xl text-black">Phone:</p>
               <p className="mt-1 text-gray-700">99 4564 6095</p>
               <p className="mt-1 text-gray-700">81 0563 1073</p>
             </div>
@@ -88,7 +88,7 @@ const ContactForm = () => {
           <div className="flex items-start">
             <Mail className="mr-4 text-blue-600 w-6 h-6" />{" "}
             <div>
-              <p className="font-bold text-xl">Email:</p>
+              <p className="font-bold text-xl text-black">Email:</p>
               <p className="mt-1 text-gray-700">enquiry@srimatru.com</p>
             </div>
           </div>
@@ -145,7 +145,7 @@ const ContactForm = () => {
             ></textarea>
             <button
               type="submit"
-              className="block w-full rounded-md bg-blue-600 px-4 py-3 text-center text-lg font-semibold text-white shadow-md hover:bg-blue-500 focus:outline-none focus:ring-2 focus:ring-indigo-400"
+              className="block w-full rounded-md bg-green-600 px-4 py-3 text-center text-lg font-semibold text-white shadow-md hover:bg-green-500 focus:outline-none focus:ring-2 focus:ring-green-400"
               disabled={isSending}
             >
               {isSending ? "Sending..." : "Let's talk"}

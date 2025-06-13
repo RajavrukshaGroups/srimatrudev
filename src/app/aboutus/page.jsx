@@ -12,7 +12,7 @@ const AboutUs=() =>{
          animate={{ x: 0, opacity: 1 }}
          transition={{ ease: "easeInOut", duration: 0.75 }}
         className="text-center mb-12">
-          <h2 className="text-3xl font-semibold mb-2">OUR SERVICES</h2>
+          <h2 className="text-3xl font-semibold mb-2 text-black">OUR SERVICES</h2>
           <p className="text-gray-600">We provide the perfect service for you.</p>
         </motion.div>
         <div className="grid md:grid-cols-2 gap-8 items-center">
@@ -27,7 +27,7 @@ const AboutUs=() =>{
               animate={{ x: 0, opacity: 1 }}
               transition={{ ease: "easeInOut", duration: 0.75 }}
               >
-                <h3 className="text-xl font-medium mb-2">Plants Care</h3>
+                <h3 className="text-xl font-medium mb-2 text-black">Plants Care</h3>
                 <p className="text-gray-600">
                   In Aenean purus, pretium sito amet sapien denim moste consectet sedoni urna placerat sodales.service
                   its.
@@ -40,7 +40,7 @@ const AboutUs=() =>{
                 <Droplets className="w-8 h-8 text-[#86C232]" />
               </div>
               <div>
-                <h3 className="text-xl font-medium mb-2">Pressure Washing</h3>
+                <h3 className="text-xl font-medium mb-2 text-black">Pressure Washing</h3>
                 <p className="text-gray-600">
                   In Aenean purus, pretium sito amet sapien denim moste consectet sedoni urna placerat sodales.service
                   its.
@@ -53,7 +53,7 @@ const AboutUs=() =>{
                 <Leaf className="w-8 h-8 text-[#86C232]" />
               </div>
               <div>
-                <h3 className="text-xl font-medium mb-2">Tree Service & Trimming</h3>
+                <h3 className="text-xl font-medium mb-2 text-black">Tree Service & Trimming</h3>
                 <p className="text-gray-600">
                   In Aenean purus, pretium sito amet sapien denim moste consectet sedoni urna placerat sodales.service
                   its.
