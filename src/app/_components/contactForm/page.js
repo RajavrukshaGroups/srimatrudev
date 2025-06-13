@@ -108,14 +108,14 @@ const ContactForm = () => {
                 type="text"
                 name="user_name"
                 placeholder="Enter Name"
-                className="w-full py-3 px-4 border border-gray-300 rounded focus:ring-2 focus:ring-indigo-400"
+                className="w-full py-3 px-4 border border-green-300 rounded focus:ring-2 focus:ring-green-400"
                 required
               />
               <input
                 type="email"
                 name="user_email"
                 placeholder="Email Address"
-                className="w-full py-3 px-4 border border-gray-300 rounded focus:ring-2 focus:ring-indigo-400"
+                className="w-full py-3 px-4 border border-green-300 rounded focus:ring-2 focus:ring-green-400"
                 required
               />
             </div>
@@ -123,14 +123,14 @@ const ContactForm = () => {
               type="text"
               name="subject"
               placeholder="Enter Subject"
-              className="w-full py-3 mb-4 px-4 border border-gray-300 rounded focus:ring-2 focus:ring-indigo-400"
+              className="w-full py-3 mb-4 px-4 border border-green-300 rounded focus:ring-2 focus:ring-green-400"
               required
             />
             <input
               type="number"
               name="user_phone"
               placeholder="Enter Phone Number"
-              className="w-full py-3 mb-4 px-4 border border-gray-300 rounded focus:ring-2 focus:ring-indigo-400"
+              className="w-full py-3 mb-4 px-4 border border-green-300 rounded focus:ring-2 focus:ring-green-400"
               minLength={10}
               maxLength={10}
               required
@@ -139,7 +139,7 @@ const ContactForm = () => {
             <textarea
               name="message"
               placeholder="Enter Message"
-              className="w-full py-3 px-4 mb-4 border border-gray-300 rounded focus:ring-2 focus:ring-indigo-400"
+              className="w-full py-3 px-4 mb-4 border border-green-300 rounded focus:ring-2 focus:ring-green-400"
               rows="4"
               required
             ></textarea>
