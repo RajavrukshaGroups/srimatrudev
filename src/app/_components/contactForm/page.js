@@ -69,7 +69,7 @@ const ContactForm = () => {
       <div className={`${style.contactPage} flex flex-wrap gap-8`}>
         <div className={`${style.contactInfo} flex-1 p-4`}>
           <div className="flex items-start mb-6">
-            <MapPin className="mr-4 text-blue-600 w-6 h-6" />{" "}
+            <MapPin className="mr-4 text-green-600 w-6 h-6" />{" "}
             <div>
               <p className="font-bold text-xl text-black">Location:</p>
               <p className="mt-1 text-gray-700">Hebbal, Bangalore</p>
@@ -77,7 +77,7 @@ const ContactForm = () => {
           </div>
 
           <div className="flex items-start mb-6">
-            <Phone className="mr-4 text-blue-600 w-6 h-6" />{" "}
+            <Phone className="mr-4 text-green-600 w-6 h-6" />{" "}
             <div>
               <p className="font-bold text-xl text-black">Phone:</p>
               <p className="mt-1 text-gray-700">99 4564 6095</p>
@@ -86,14 +86,16 @@ const ContactForm = () => {
           </div>
 
           <div className="flex items-start">
-            <Mail className="mr-4 text-blue-600 w-6 h-6" />{" "}
+            <Mail className="mr-4 text-green-600 w-6 h-6" />{" "}
             <div>
               <p className="font-bold text-xl text-black">Email:</p>
               <p className="mt-1 text-gray-700">enquiry@srimatru.com</p>
             </div>
           </div>
         </div>
-        <div className={`${style.contactImg} shadow-lg rounded-lg`}>
+        <div
+          className={`${style.contactImg} shadow-lg border border-green-500`}
+        >
           <Image src={contactImg} alt="contact" width={500} height={300} />
         </div>
       </div>
