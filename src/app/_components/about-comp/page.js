@@ -61,7 +61,7 @@ const AboutUs = () => {
           <button
             onClick={() => setActiveTab("mission")}
             className={`text-gray-600 border-b-2 ${
-              activeTab === "mission" ? "border-blue-600" : "border-transparent"
+              activeTab === "mission" ? "border-green-600" : "border-transparent"
             } hover:border-gray-800`}
           >
             Our Mission
@@ -69,7 +69,7 @@ const AboutUs = () => {
           <button
             onClick={() => setActiveTab("vision")}
             className={`text-gray-600 border-b-2 ${
-              activeTab === "vision" ? "border-blue-600" : "border-transparent"
+              activeTab === "vision" ? "border-green-600" : "border-transparent"
             } hover:border-gray-800`}
           >
             Our Vision
@@ -85,7 +85,7 @@ const AboutUs = () => {
           </div>
           <div>
             {renderContent()}
-            <button className="px-6 py-3 bg-blue-600 text-white rounded-lg shadow hover:bg-blue-700">
+            <button className="px-6 py-3 bg-green-600 text-white rounded-lg shadow hover:bg-green-700">
               <Link href="/contact">Get In Touch</Link>
             </button>
           </div>

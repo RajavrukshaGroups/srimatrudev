@@ -1,4 +1,5 @@
 import styles from "./overlay.module.css";
+import Link from "next/link";
 
 export default function Text() {
   return (
@@ -7,8 +8,12 @@ export default function Text() {
         Find Your Perfect Space – Inspired by Nature's Elegance
       </h1>
       <div className={styles.buttonsDiv}>
-        <button className={styles.button}>About Us</button>
-        <button className={styles.button}>Projects</button>
+        <button className={styles.button}>
+          <Link href="/about">About Us</Link>
+        </button>
+        <button className={styles.button}>
+          <Link href="/projects">Projects</Link>
+        </button>
       </div>
     </div>
   );

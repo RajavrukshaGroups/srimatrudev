@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { MapPin, Phone, Mail } from "lucide-react"; // Import icons
 import footerImg from "../assets/footer-img.jpg"; // Footer image
 
@@ -58,28 +59,36 @@ const Footer = () => {
                     <span className="footer-heading">Useful Links</span>
                     <ul className="links-list list-none space-y-2">
                       <li>
-                        <a
+                        <Link
                           className="text-md text-gray-300 hover:font-bold hover:text-white"
-                          href="#"
+                          href="/about"
                         >
                           About Us
-                        </a>
+                        </Link>
                       </li>
-                      <li>
+                      {/* <li>
                         <a
                           className="text-md text-gray-300 hover:font-bold hover:text-white"
                           href="#"
                         >
                           Projects
                         </a>
+                      </li> */}
+                      <li>
+                        <Link
+                          className="text-md text-gray-300 hover:font-bold hover:text-white"
+                          href="/projects"
+                        >
+                          Projects
+                        </Link>
                       </li>
                       <li>
-                        <a
+                        <Link
                           className="text-md text-gray-300 hover:font-bold hover:text-white"
-                          href="#"
+                          href="/contact"
                         >
                           Contact Us
-                        </a>
+                        </Link>
                       </li>
                     </ul>
                   </div>
@@ -87,20 +96,20 @@ const Footer = () => {
                     <span className="footer-heading">Other Resources</span>
                     <ul className="resources-list list-none space-y-2">
                       <li>
-                        <a
+                        <Link
                           className="text-md text-gray-300 hover:font-bold hover:text-white"
-                          href="#"
+                          href="/termscondition"
                         >
-                          Terms &amp; Conditions
-                        </a>
+                          Terms & Conditions
+                        </Link>
                       </li>
                       <li>
-                        <a
+                        <Link
                           className="text-md text-gray-300 hover:font-bold hover:text-white"
-                          href="#"
+                          href="/privacypolicy"
                         >
                           Privacy Policy
-                        </a>
+                        </Link>
                       </li>
                     </ul>
                   </div>
