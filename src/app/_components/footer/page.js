@@ -1,112 +1,115 @@
-import Link from "next/link";
-import { MapPin, Phone, Mail } from "lucide-react"; // Import icons
-import footerImg from "../assets/footer-img.jpg"; // Footer image
+"use client";
 
-import "./footer.css"; // Import the external CSS
+import Link from "next/link";
+import { MapPin, Phone, Mail } from "lucide-react";
+import footerImg from "../assets/footer-img.jpg";
+import "./footer.css";
 
 const Footer = () => {
   return (
     <footer className="footer-container">
-      {/* Footer Image */}
       <div className="footer-image-container">
         <img
           src={footerImg.src}
           alt="Footer Decorative"
           className="footer-image"
         />
-        {/* Text Content Overlay with Blur and Green Tint */}
+
         <div className="footer-content-overlay">
           <div className="container mx-auto px-4">
-            <div className="flex flex-wrap text-left lg:text-left mt-6 mob-footer">
-              {/* Contact Information */}
-              <div className="contact-info w-full lg:w-6/12 px-4">
-                <span className="footer-heading">
+            <div className="flex flex-wrap text-left mt-6">
+              {/* Contact Info */}
+              <div className="w-full lg:w-6/12 px-4 mb-8 lg:mb-0">
+                <h4 className="footer-heading">
                   We guide you in selecting the best property that aligns with
                   your vision and goals
-                </span>
-                <ul className="contact-list list-none space-y-4">
-                  <li className="flex items-center">
-                    <MapPin className="mr-2 icon" />
+                </h4>
+                <ul className="contact-list space-y-4">
+                  <li className="flex items-start">
+                    <MapPin className="icon mr-2 mt-1" />
                     <span className="text-md text-gray-300 hover:font-bold hover:text-white">
-                      <a href="#">Hebbal,Bengaluru</a>
+                      #38, 1st Main Road, 5th Cross, Jayamuni Nagar, Baglur
+                      Cross, Yelahanka, Bangalore-560063
                     </span>
                   </li>
                   <li className="flex items-center">
-                    <Phone className="mr-2 icon" />
-                    <span className="text-md text-gray-300 hover:font-bold hover:text-white">
-                      <a href="#">+91 9945 646 095</a>
-                    </span>
+                    <Phone className="icon mr-2" />
+                    <a
+                      href="tel:+918058060320"
+                      className="text-md text-gray-300 hover:font-bold hover:text-white"
+                    >
+                      +91 8058 060 320
+                    </a>
                   </li>
                   <li className="flex items-center">
-                    <Phone className="mr-2 icon" />
-                    <span className="text-md text-gray-300 hover:font-bold hover:text-white">
-                      <a href="#">+91 8105 631 073</a>
-                    </span>
+                    <Phone className="icon mr-2" />
+                    <a
+                      href="tel:+919945646095"
+                      className="text-md text-gray-300 hover:font-bold hover:text-white"
+                    >
+                      +91 9945 646 095
+                    </a>
                   </li>
                   <li className="flex items-center">
-                    <Mail className="mr-2 icon" />
-                    <span className="text-md text-gray-300 hover:font-bold hover:text-white">
-                      <a href="#">contact@srimatrudevelopers.com</a>
-                    </span>
+                    <Mail className="icon mr-2" />
+                    <a
+                      href="mailto:srimatrudevelopers@gmail.com"
+                      className="text-md text-gray-300 hover:font-bold hover:text-white"
+                    >
+                      srimatrudevelopers@gmail.com
+                    </a>
                   </li>
                 </ul>
               </div>
 
               {/* Useful Links */}
-              <div className="useful-links w-full lg:w-6/12 px-4">
-                <div className="flex flex-wrap items-top mb-6 mob-screen">
-                  <div className="links-column w-full lg:w-4/12 px-4 ml-auto">
-                    <span className="footer-heading">Useful Links</span>
-                    <ul className="links-list list-none space-y-2">
+              <div className="w-full lg:w-6/12 px-4">
+                <div className="flex flex-wrap">
+                  <div className="w-full sm:w-6/12 mb-6 sm:mb-0">
+                    <h4 className="footer-heading">Useful Links</h4>
+                    <ul className="links-list space-y-2">
                       <li>
                         <Link
-                          className="text-md text-gray-300 hover:font-bold hover:text-white"
                           href="/about"
+                          className="text-md text-gray-300 hover:font-bold hover:text-white"
                         >
                           About Us
                         </Link>
                       </li>
-                      {/* <li>
-                        <a
-                          className="text-md text-gray-300 hover:font-bold hover:text-white"
-                          href="#"
-                        >
-                          Projects
-                        </a>
-                      </li> */}
                       <li>
                         <Link
-                          className="text-md text-gray-300 hover:font-bold hover:text-white"
                           href="/projects"
+                          className="text-md text-gray-300 hover:font-bold hover:text-white"
                         >
                           Projects
                         </Link>
                       </li>
                       <li>
                         <Link
-                          className="text-md text-gray-300 hover:font-bold hover:text-white"
                           href="/contact"
+                          className="text-md text-gray-300 hover:font-bold hover:text-white"
                         >
                           Contact Us
                         </Link>
                       </li>
                     </ul>
                   </div>
-                  <div className="resources-column w-full lg:w-4/12 px-4">
-                    <span className="footer-heading">Other Resources</span>
-                    <ul className="resources-list list-none space-y-2">
+
+                  <div className="w-full sm:w-6/12">
+                    <h4 className="footer-heading">Other Resources</h4>
+                    <ul className="resources-list space-y-2">
                       <li>
                         <Link
-                          className="text-md text-gray-300 hover:font-bold hover:text-white"
                           href="/termscondition"
+                          className="text-md text-gray-300 hover:font-bold hover:text-white"
                         >
                           Terms & Conditions
                         </Link>
                       </li>
                       <li>
                         <Link
-                          className="text-md text-gray-300 hover:font-bold hover:text-white"
                           href="/privacypolicy"
+                          className="text-md text-gray-300 hover:font-bold hover:text-white"
                         >
                           Privacy Policy
                         </Link>
@@ -115,6 +118,7 @@ const Footer = () => {
                   </div>
                 </div>
               </div>
+              {/* End Useful Links */}
             </div>
           </div>
         </div>

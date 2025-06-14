@@ -1,86 +1,90 @@
-"use client"
-import { Leaf, Droplets, FlowerIcon as FlowerPot, Play } from "lucide-react"
-import Image from "next/image"
-import mainImage from '../assets/img/23.jpg'
+"use client";
+import { Building, Home, TrendingUp } from "lucide-react";
+import Image from "next/image";
+import landImg from "../assets/img/land.webp";
 import { motion } from "framer-motion";
-const AboutUs=() =>{
+
+const AboutUs = () => {
   return (
-    <section className="py-16 px-4 md:px-8 bg-gray-50">
+    <section className="py-20 px-4 md:px-8 bg-gray-50">
       <div className="max-w-6xl mx-auto">
-        <motion.div 
-         initial={{ x: 20, opacity: 0 }}
-         animate={{ x: 0, opacity: 1 }}
-         transition={{ ease: "easeInOut", duration: 0.75 }}
-        className="text-center mb-12">
-          <h2 className="text-3xl font-semibold mb-2 text-black">OUR SERVICES</h2>
-          <p className="text-gray-600">We provide the perfect service for you.</p>
+        <motion.div
+          initial={{ y: 20, opacity: 0 }}
+          animate={{ y: 0, opacity: 1 }}
+          transition={{ ease: "easeInOut", duration: 0.6 }}
+          className="text-center mb-16"
+        >
+          <h2 className="text-4xl font-bold text-black mb-4">Our Services</h2>
+          <p className="text-gray-600 text-lg max-w-2xl mx-auto">
+            Discover how we help you find the perfect space and investment
+            opportunities tailored to your lifestyle and goals.
+          </p>
         </motion.div>
-        <div className="grid md:grid-cols-2 gap-8 items-center">
+
+        <div className="grid md:grid-cols-2 gap-10 items-center">
           {/* Services List */}
-          <div className="space-y-8">
-            <div className="flex gap-4">
-              <div className="flex-shrink-0">
-                <FlowerPot className="w-8 h-8 text-[#86C232]" />
-              </div>
+          <div className="space-y-10">
+            {[
+              {
+                icon: <Building className="w-9 h-9 text-[#86C232]" />,
+                title: "Real Estate",
+                description:
+                  "Whether you're buying or selling, our team of seasoned professionals are dedicated to delivering tailored solutions. With a broad range of residential properties, we’ll help you discover the ideal space to fit your vision and needs.",
+              },
+              {
+                icon: <Home className="w-9 h-9 text-[#86C232]" />,
+                title: "Residential Development",
+                description:
+                  "From luxurious single-family homes to expansive residential communities, we create living spaces that are designed for comfort, convenience, and long-term value. We focus on smart design and sustainable building practices to ensure every home is a place to thrive.",
+              },
+              {
+                icon: <TrendingUp className="w-9 h-9 text-[#86C232]" />,
+                title: "Investment Opportunities",
+                description:
+                  "Explore our curated selection of investment properties, hand-picked for their potential for growth and long-term profitability. Our team offers valuable insights to help you make informed, strategic real estate investment decisions.",
+              },
+            ].map((service, idx) => (
               <motion.div
-              initial={{ x: 20, opacity: 0 }}
-              animate={{ x: 0, opacity: 1 }}
-              transition={{ ease: "easeInOut", duration: 0.75 }}
+                key={idx}
+                initial={{ x: 20, opacity: 0 }}
+                whileInView={{ x: 0, opacity: 1 }}
+                transition={{ duration: 0.6, delay: idx * 0.2 }}
+                viewport={{ once: true }}
+                className="flex items-start gap-4"
               >
-                <h3 className="text-xl font-medium mb-2 text-black">Plants Care</h3>
-                <p className="text-gray-600">
-                  In Aenean purus, pretium sito amet sapien denim moste consectet sedoni urna placerat sodales.service
-                  its.
-                </p>
+                <div className="mt-1">{service.icon}</div>
+                <div>
+                  <h3 className="text-xl font-semibold text-black mb-2">
+                    {service.title}
+                  </h3>
+                  <p className="text-gray-700 leading-relaxed text-[16px]">
+                    {service.description}
+                  </p>
+                </div>
               </motion.div>
-            </div>
-
-            <div className="flex gap-4">
-              <div className="flex-shrink-0">
-                <Droplets className="w-8 h-8 text-[#86C232]" />
-              </div>
-              <div>
-                <h3 className="text-xl font-medium mb-2 text-black">Pressure Washing</h3>
-                <p className="text-gray-600">
-                  In Aenean purus, pretium sito amet sapien denim moste consectet sedoni urna placerat sodales.service
-                  its.
-                </p>
-              </div>
-            </div>
-
-            <div className="flex gap-4">
-              <div className="flex-shrink-0">
-                <Leaf className="w-8 h-8 text-[#86C232]" />
-              </div>
-              <div>
-                <h3 className="text-xl font-medium mb-2 text-black">Tree Service & Trimming</h3>
-                <p className="text-gray-600">
-                  In Aenean purus, pretium sito amet sapien denim moste consectet sedoni urna placerat sodales.service
-                  its.
-                </p>
-              </div>
-            </div>
+            ))}
           </div>
+
           {/* Image Section */}
-          <div className="relative rounded-lg overflow-hidden">
+          <motion.div
+            initial={{ opacity: 0, scale: 0.95 }}
+            whileInView={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 0.6 }}
+            viewport={{ once: true }}
+            className="relative rounded-xl overflow-hidden shadow-lg"
+          >
             <Image
-              src={mainImage}
-              alt="Gardening service demonstration"
+              src={landImg}
+              alt="Real estate property"
               width={600}
               height={400}
               className="w-full h-[400px] object-cover"
             />
-            <div className="absolute inset-0 flex items-center justify-center">
-              <button className="w-16 h-16 bg-[#86C232] rounded-full flex items-center justify-center hover:bg-[#78b129] transition-colors">
-                <Play className="w-8 h-8 text-white" />
-              </button>
-            </div>
-          </div>
+          </motion.div>
         </div>
       </div>
     </section>
-  )
-}
+  );
+};
 
-
-export default AboutUs
+export default AboutUs;

@@ -5,6 +5,7 @@ import PageTitle from "../_components/pageTitle/page";
 import Footer from "../_components/footer/page";
 import About from "../_components/about-comp/page";
 import AboutUs from "../aboutus/page";
+import WhyChooseUs from "../_components/whychooseus/page";
 export default function aboutUs() {
   let pageTitle = "About Us";
   return (
@@ -13,6 +14,7 @@ export default function aboutUs() {
       <NavBar />
       <PageTitle title={pageTitle} />
       <About />
+      <WhyChooseUs />
       <AboutUs />
       <Footer />
     </div>

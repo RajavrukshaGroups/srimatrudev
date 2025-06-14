@@ -72,7 +72,10 @@ const ContactForm = () => {
             <MapPin className="mr-4 text-green-600 w-6 h-6" />{" "}
             <div>
               <p className="font-bold text-xl text-black">Location:</p>
-              <p className="mt-1 text-gray-700">Hebbal, Bangalore</p>
+              <p className="mt-1 text-gray-700">
+                #38, 1st Main Road, 5th Cross, Jayamuni Nagar, Baglur Cross,
+                Yelahanka, Bangalore-560063{" "}
+              </p>
             </div>
           </div>
 
@@ -89,7 +92,7 @@ const ContactForm = () => {
             <Mail className="mr-4 text-green-600 w-6 h-6" />{" "}
             <div>
               <p className="font-bold text-xl text-black">Email:</p>
-              <p className="mt-1 text-gray-700">enquiry@srimatru.com</p>
+              <p className="mt-1 text-gray-700">srimatrudevelopers@gmail.com</p>
             </div>
           </div>
         </div>

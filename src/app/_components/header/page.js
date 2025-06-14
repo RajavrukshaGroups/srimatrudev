@@ -5,7 +5,7 @@ const Header = () => {
   return (
     <div className={styles.mainHeader}>
       <p className={styles.contactInfo}>
-        <Mail className={styles.icon} /> enquiry@srimatrudevelopers.com
+        <Mail className={styles.icon} /> srimatrudevelopers@gmail.com
       </p>
       <p className={styles.contactInfo}>
         <Phone className={styles.icon} /> +91 9945646095
