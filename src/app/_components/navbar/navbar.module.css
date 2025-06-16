@@ -144,6 +144,22 @@ body {
   margin-top: 15px;
 }
 
+.button {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.75rem 1.5rem;
+  font-size: 1rem;
+  font-weight: 600;
+  background: linear-gradient(to right, #43b267, #2e914e);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  text-decoration: none;
+  box-shadow: 0 4px 8px rgba(40, 167, 69, 0.5);
+  transition: background 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
+}
+
 /* Mobile Styles */
 @media (max-width: 768px) {
   .navLinks {

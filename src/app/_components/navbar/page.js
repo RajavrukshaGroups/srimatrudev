@@ -38,7 +38,7 @@ const NavBar = () => {
           <Link href="/projects">Projects</Link>
         </div>
         <div className={styles.contactButtonWrapper}>
-          <button className={styles.contactButton}>
+          <button className={styles.button}>
             <Link
               href="/contact"
               style={{ textDecoration: "none", color: "inherit" }}

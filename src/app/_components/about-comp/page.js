@@ -31,7 +31,7 @@ const AboutUs = () => {
           transition={{ duration: 0.6 }}
           className="text-center mb-10"
         >
-          <h2 className="text-4xl font-bold text-gray-800">About Us</h2>
+          {/* <h2 className="text-4xl font-bold text-gray-800">About Us</h2> */}
           <p className="text-gray-600 mt-4 max-w-2xl mx-auto text-lg">
             We’re dedicated to reshaping real estate through innovation,
             sustainability, and a customer-first approach.

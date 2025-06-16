@@ -14,8 +14,8 @@ export default function aboutUs() {
       <NavBar />
       <PageTitle title={pageTitle} />
       <About />
-      <WhyChooseUs />
-      <AboutUs />
+      {/* <WhyChooseUs /> */}
+      {/* <AboutUs /> */}
       <Footer />
     </div>
   );

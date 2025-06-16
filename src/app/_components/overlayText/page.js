@@ -1,19 +1,22 @@
 import styles from "./overlay.module.css";
 import Link from "next/link";
+import { ArrowRight } from "lucide-react";
 
 export default function Text() {
   return (
     <div className={styles.overlayDiv}>
-      <h1 className={`${styles.overlayText} text-4xl`}>
-        Crafting Spaces for Today, Shaping Futures for Tomorrow
+      <h1 className={`${styles.overlayText}`}>
+        Crafting Spaces for Today,
+        <br />
+        Shaping Futures for Tomorrow
       </h1>
       <div className={styles.buttonsDiv}>
-        <button className={styles.button}>
-          <Link href="/about">About Us</Link>
-        </button>
-        <button className={styles.button}>
-          <Link href="/projects">Projects</Link>
-        </button>
+        <Link href="/about" className={styles.button}>
+          About Us <ArrowRight size={16} className="ml-2" />
+        </Link>
+        <Link href="/projects" className={styles.button}>
+          Projects <ArrowRight size={16} className="ml-2" />
+        </Link>
       </div>
     </div>
   );

@@ -8,7 +8,8 @@
   position: relative;
   width: 100%;
   height: 100vh; /* Ensure full height for the background */
-  background-image: url("../_components/assets/bg-img-2.jpg");
+  /* background-image: url("../_components/assets/bg-img-2.jpg"); */
+  background-image: url("../_components/assets/birdview.jpg");
   background-size: cover;
   background-position: center top; /* Center the background */
   background-repeat: no-repeat;

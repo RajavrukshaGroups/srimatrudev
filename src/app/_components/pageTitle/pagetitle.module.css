@@ -11,7 +11,8 @@
   left: 0;
   width: 100%;
   height: 100%;
-  background-image: url("../assets/bg-pages.jpg");
+  /* background-image: url("../assets/bg-pages.jpg"); */
+  background-image: url("../assets/plots.jpg");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;

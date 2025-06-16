@@ -30,7 +30,8 @@ const reasons = [
   },
 ];
 
-const WhyChooseUs = () => {
+const WhyChooseUs = (page) => {
+  console.log(page);
   return (
     <section className="py-20 bg-gray-50">
       <div className="max-w-7xl mx-auto px-6 lg:px-8">
@@ -41,7 +42,17 @@ const WhyChooseUs = () => {
           viewport={{ once: true }}
           className="text-center mb-12"
         >
-          <h2 className="text-4xl font-bold text-gray-800">Why Choose Us</h2>
+          {/* <h2 className="text-4xl font-bold text-gray-800">Why Choose Us</h2> */}
+          {/* <h2 className="text-4xl font-extrabold text-center text-green-700 mb-4">
+            Why Choose Us
+          </h2> */}
+          <h2
+            className={`text-4xl font-extrabold text-center mb-4 ${
+              page?.page === "projectsPage" ? "text-green-700" : "text-gray-800"
+            }`}
+          >
+            Why Choose Us
+          </h2>
           <p className="text-gray-600 mt-4 max-w-2xl mx-auto text-lg">
             Our passion, professionalism, and results-driven approach set us
             apart in the real estate landscape.
@@ -61,7 +72,16 @@ const WhyChooseUs = () => {
               <div className="flex items-start gap-4">
                 <div>{reason.icon}</div>
                 <div>
-                  <h3 className="text-xl font-semibold text-gray-800 mb-2">
+                  {/* <h3 className="text-xl font-semibold text-gray-800 mb-2">
+                    {reason.title}
+                  </h3> */}
+                  <h3
+                    className={`text-xl font-semibold mb-2 ${
+                      page?.page === "projectsPage"
+                        ? "text-green-700"
+                        : "text-gray-800"
+                    }`}
+                  >
                     {reason.title}
                   </h3>
                   <p className="text-gray-600 leading-relaxed">
