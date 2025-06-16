@@ -116,7 +116,7 @@ const ContactForm = () => {
             </p>
           )}
         </div>
-        <div className="flex-1 space-y-8">
+        {/* <div className="flex-1 space-y-8">
           <div className="flex items-start">
             <MapPin className="mr-4 text-green-600 w-6 h-6" />
             <div>
@@ -142,6 +142,46 @@ const ContactForm = () => {
             <div>
               <p className="font-bold text-xl text-black">Email:</p>
               <p className="mt-1 text-gray-700">srimatrudevelopers@gmail.com</p>
+            </div>
+          </div>
+        </div> */}
+        <div className="flex-1 grid gap-6">
+          {/* Location */}
+          <div className="flex items-start bg-green-50 border border-green-200 p-5 rounded-xl shadow hover:shadow-md transition">
+            <div className="w-12 h-12 flex items-center justify-center bg-green-600 text-white rounded-full mr-4">
+              <MapPin className="w-5 h-5" />
+            </div>
+            <div>
+              <p className="text-lg font-semibold text-black">Location</p>
+              <p className="text-gray-700 text-sm mt-1 leading-relaxed">
+                #38, 1st Main Road, 5th Cross, Jayamuni Nagar, Baglur Cross,
+                Yelahanka, Bangalore-560063
+              </p>
+            </div>
+          </div>
+
+          {/* Phone */}
+          <div className="flex items-start bg-green-50 border border-green-200 p-5 rounded-xl shadow hover:shadow-md transition">
+            <div className="w-12 h-12 flex items-center justify-center bg-green-600 text-white rounded-full mr-4">
+              <Phone className="w-5 h-5" />
+            </div>
+            <div>
+              <p className="text-lg font-semibold text-black">Phone</p>
+              <p className="text-gray-700 text-sm mt-1">99 4564 6095</p>
+              <p className="text-gray-700 text-sm">81 0563 1073</p>
+            </div>
+          </div>
+
+          {/* Email */}
+          <div className="flex items-start bg-green-50 border border-green-200 p-5 rounded-xl shadow hover:shadow-md transition">
+            <div className="w-12 h-12 flex items-center justify-center bg-green-600 text-white rounded-full mr-4">
+              <Mail className="w-5 h-5" />
+            </div>
+            <div>
+              <p className="text-lg font-semibold text-black">Email</p>
+              <p className="text-gray-700 text-sm mt-1">
+                srimatrudevelopers@gmail.com
+              </p>
             </div>
           </div>
         </div>
