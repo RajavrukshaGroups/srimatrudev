@@ -120,7 +120,7 @@ const ContactForm = () => {
           <div className="flex-1 grid gap-6">
             {/* Location */}
             <div className="flex items-start bg-green-50 border border-green-200 p-5 rounded-xl shadow hover:shadow-md transition">
-              <div className="w-12 h-12 flex items-center justify-center bg-green-600 text-white rounded-full mr-4">
+              <div className="w-12 h-12 aspect-square flex items-center justify-center bg-green-600 text-white rounded-full mr-4">
                 <MapPin className="w-5 h-5" />
               </div>
               <div>
@@ -139,8 +139,8 @@ const ContactForm = () => {
               </div>
               <div>
                 <p className="text-lg font-semibold text-black">Phone</p>
-                <p className="text-gray-700 text-sm mt-1">99 4564 6095</p>
-                <p className="text-gray-700 text-sm">81 0563 1073</p>
+                <p className="text-gray-700 text-sm mt-1">+91 9945 646 095</p>
+                <p className="text-gray-700 text-sm">+91 8058 060 320</p>
               </div>
             </div>
 

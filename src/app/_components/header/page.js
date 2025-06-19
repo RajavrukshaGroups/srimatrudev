@@ -8,7 +8,7 @@ const Header = () => {
         <Mail className={styles.icon} /> srimatrudevelopers@gmail.com
       </p>
       <p className={styles.contactInfo}>
-        <Phone className={styles.icon} /> +91 9945646095
+        <Phone className={styles.icon} /> +91 9945 646 095
       </p>
     </div>
   );

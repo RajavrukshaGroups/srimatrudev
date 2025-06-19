@@ -38,7 +38,7 @@ const Footer = () => {
                       href="tel:+918058060320"
                       className="text-md text-gray-300 hover:font-bold hover:text-white"
                     >
-                      +91 8058 060 320
+                      +91 9945 646 095
                     </a>
                   </li>
                   <li className="flex items-center">
@@ -47,7 +47,7 @@ const Footer = () => {
                       href="tel:+919945646095"
                       className="text-md text-gray-300 hover:font-bold hover:text-white"
                     >
-                      +91 9945 646 095
+                      +91 8058 060 320
                     </a>
                   </li>
                   <li className="flex items-center">
