@@ -1,8 +1,11 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-    images: {
-        domains: ['hebbkx1anhila5yf.public.blob.vercel-storage.com'], // Add your hostname here
-      },
+  output: 'export',
+  images: {
+    unoptimized: true, // ✅ Fix for static export
+    domains: ['hebbkx1anhila5yf.public.blob.vercel-storage.com'],
+  },
 };
+
 
 export default nextConfig;
