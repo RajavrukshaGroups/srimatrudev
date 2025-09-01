@@ -98,14 +98,6 @@ const Footer = () => {
                   <div className="w-full sm:w-6/12">
                     <h4 className="footer-heading">Other Resources</h4>
                     <ul className="resources-list space-y-2">
-                      {/* <li>
-                        <Link
-                          href="/termscondition"
-                          className="text-md text-gray-300 hover:font-bold hover:text-white"
-                        >
-                          Terms & Conditions
-                        </Link>
-                      </li> */}
                       <li>
                         <Link
                           href="/privacypolicy"
@@ -120,6 +112,11 @@ const Footer = () => {
               </div>
               {/* End Useful Links */}
             </div>
+          </div>
+
+          <div className="footer-credit">
+            Designed by{" "}
+            <span className="font-semibold">Digital Elite Services</span>
           </div>
         </div>
       </div>

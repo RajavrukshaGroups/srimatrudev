@@ -38,6 +38,18 @@
   color: white;
 }
 
+.footer-credit {
+  position: absolute;
+  bottom: 0.75rem;
+  right: 1rem;
+  font-size: 0.85rem;
+  color: #d1d5db; /* gray-300 */
+}
+
+.footer-credit span {
+  color: #ffffff; /* highlight */
+}
+
 /* Responsive Styles */
 @media (max-width: 768px) {
   .footer-image {
