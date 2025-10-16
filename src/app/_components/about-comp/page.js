@@ -5,6 +5,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import Image from "next/image";
 import Link from "next/link";
 import landImg from "../../_components/assets/land.jpg";
+// import landImg from "../../_components/assets/about_new.jpg";
 
 const AboutUs = () => {
   const [activeTab, setActiveTab] = useState("mission");

@@ -1,168 +1,200 @@
-/* General Navbar Styles */
-/* body {
-  margin: 0;
-  padding: 0;
-} */
-
+/* ---------- NAVBAR (left-logo layout) ---------- */
 .navbar {
-  display: flex;
-  justify-content: space-between;
+  display: grid;
+  grid-template-columns: auto 1fr auto; /* logo | links | contact */
   align-items: center;
-  padding: 25px 20px;
-  color: white;
+  gap: 12px;
+  padding: 22px 32px;
   position: sticky;
   top: 0;
   width: 100%;
   z-index: 1000;
-  /* background-color: black; */
-  transition: background-color 0.3s ease;
+  color: white;
+  background: transparent;
+  transition: background-color 300ms ease, padding 300ms ease, height 300ms ease,
+    box-shadow 300ms ease;
 }
 
-/* Scrolled Navbar */
-.navbar.scrolled {
-  background-color: black;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-}
-
-/* Nav Links */
-.navLinks {
+/* ---------- LEFT: logo ---------- */
+.leftLogo {
   display: flex;
-  gap: 10px; /* Default gap for small screens */
+  justify-content: flex-start;
+  align-items: center;
+  padding-left: 6px;
 }
 
-/* Hover effect for navigation links */
-.navLinks a:hover,
-.modalContent a:hover {
-  color: #4caf50; /* Greenish color */
-  opacity: 0.8; /* Dim effect */
-  transition: color 0.3s ease, opacity 0.3s ease; /* Smooth transition */
+.logoLink {
+  display: inline-block;
+  line-height: 0;
 }
 
-/* Large Screen Styles */
-@media (min-width: 1024px) {
-  .navLinks {
-    gap: 30px; /* Add more spacing between links for large screens */
-  }
+.logoImage {
+  width: 140px;
+  height: 140px;
+  object-fit: contain;
+  display: block;
+  transition: width 300ms ease, height 300ms ease, transform 300ms ease;
 }
 
-/* Hamburger Button */
+/* ---------- CENTER LINKS ---------- */
+.centerNav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 28px;
+  font-weight: 600;
+}
+
+.centerNav a {
+  text-decoration: none;
+  color: white;
+  font-weight: 600;
+  transition: color 300ms ease;
+}
+
+.centerNav a:hover {
+  color: #4caf50;
+}
+
+/* ---------- RIGHT SECTION ---------- */
+.rightGroup {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 14px;
+  padding-right: 6px;
+}
+
+.contactLink {
+  padding: 8px 14px;
+  border-radius: 6px;
+  background: linear-gradient(to right, #43b267, #2e914e);
+  color: white !important;
+  text-decoration: none;
+  font-weight: 600;
+  box-shadow: 0 3px 6px rgba(40, 167, 69, 0.15);
+  transition: all 300ms ease;
+}
+
+.contactLink:hover {
+  transform: translateY(-1px);
+}
+
+/* ---------- SCROLLED STATE ---------- */
+.navbar.scrolled {
+  background-color: white;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+  padding: 8px 24px; /* compact */
+  height: 5rem;
+  align-items: center;
+}
+
+/* Logo shrinks on scroll */
+.navbar.scrolled .logoImage {
+  width: 80px;
+  height: 80px;
+  transform: translateY(0); /* ensures proper alignment */
+}
+
+/* Text and button color changes */
+.navbar.scrolled .centerNav a,
+.navbar.scrolled .contactLink {
+  color: #349134 !important;
+}
+
+.navbar.scrolled .contactLink {
+  background: white;
+  border: 2px solid #349134;
+  box-shadow: none;
+  color: #349134 !important;
+}
+
+.navbar.scrolled .contactLink:hover {
+  background: #349134;
+  color: white !important;
+}
+
+/* ---------- HAMBURGER ---------- */
 .hamburgerButton {
   display: none;
-  font-size: 1.5rem;
   background: none;
   border: none;
   color: white;
+  font-size: 1.3rem;
   cursor: pointer;
-  margin-left: auto;
+  transition: color 300ms ease;
 }
 
-/* Contact Button Wrapper */
-.contactButtonWrapper {
-  display: none;
+.navbar.scrolled .hamburgerButton {
+  color: #349134;
 }
 
-/* Contact Button Styles */
-.contactButton {
-  background-color: #349134; /* Light green background */
-  color: white; /* White text */
-  border: 2px solid white; /* White border */
-  padding: 8px 16px; /* Adjust padding as needed */
-  border-radius: 4px; /* Rounded corners */
-  font-size: 14px; /* Adjust font size as needed */
-  cursor: pointer;
-  transition: background-color 0.3s ease, opacity 0.3s ease; /* Smooth transition */
-}
-
-/* Hover effect for the Contact Us button */
-.contactButton:hover {
-  background-color: #419d41; /* Slightly darker green on hover */
-  opacity: 0.9; /* Slight dim effect */
-}
-
-/* Modal Styles */
+/* ---------- MODAL ---------- */
 .modal {
   position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.7);
+  inset: 0;
+  background: rgba(0, 0, 0, 0.72);
   display: flex;
-  justify-content: flex-start;
-  align-items: flex-start;
+  justify-content: flex-end;
   z-index: 2000;
-  overflow: hidden;
-  transition: height 0.3s ease-in-out;
-}
-
-.modal.open {
-  height: 100%;
 }
 
 .modalContent {
-  background-color: black;
-  width: 100%;
-  padding: 10px 20px; /* Adjust padding to reduce space */
+  width: 80%;
+  max-width: 340px;
+  background: black;
+  padding: 24px;
+  color: white;
+  position: relative;
+}
+
+.modalLinks {
   display: flex;
   flex-direction: column;
-  gap: 10px; /* Reduce the gap between links */
-  overflow-y: auto;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  margin-top: 0; /* Ensure there’s no margin pushing content down */
+  gap: 16px;
+  font-size: 18px;
 }
 
-.modalContent .header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  width: 100%;
-}
-
-.modalContent a {
-  text-decoration: none;
+.modalLinks a {
   color: white;
-  font-size: 20px;
-  font-weight: bold;
+  text-decoration: none;
+  font-weight: 600;
 }
 
-.modalContent .closeButton {
+.modalLinks a:hover {
+  color: #4caf50;
+}
+
+.closeButton {
+  position: absolute;
+  top: 8px;
+  right: 10px;
+  font-size: 2rem;
   background: none;
   border: none;
-  font-size: 4rem;
-  align-self: flex-end;
+  color: white;
   cursor: pointer;
-  margin-right: -1rem;
-  color: white;
 }
 
-.closeButtonDiv {
-  margin-top: -9rem;
+/* ---------- RESPONSIVE ---------- */
+@media (max-width: 1024px) {
+  .logoImage {
+    width: 110px;
+    height: 110px;
+  }
+
+  .navbar.scrolled .logoImage {
+    width: 70px;
+    height: 70px;
+  }
+
+  .centerNav {
+    gap: 20px;
+  }
 }
 
-.indLink {
-  margin-bottom: 15px;
-  margin-top: 15px;
-}
-
-.button {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.5rem;
-  padding: 0.75rem 1.5rem;
-  font-size: 1rem;
-  font-weight: 600;
-  background: linear-gradient(to right, #43b267, #2e914e);
-  color: white;
-  border: none;
-  border-radius: 8px;
-  text-decoration: none;
-  box-shadow: 0 4px 8px rgba(40, 167, 69, 0.5);
-  transition: background 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
-}
-
-/* Mobile Styles */
 @media (max-width: 768px) {
-  .navLinks {
+  .centerNav {
     display: none;
   }
 
@@ -170,25 +202,22 @@
     display: block;
   }
 
+  .logoImage {
+    width: 90px;
+    height: 90px;
+  }
+
   .navbar {
-    background-color: black;
-    padding: 2rem;
-    z-index: 1000; /* Ensure it stays on top of other content */
+    grid-template-columns: auto 1fr auto;
+    padding: 10px 12px;
   }
 
   .navbar.scrolled {
-    background-color: black;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    height: 4rem;
   }
-  .displayNav {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
-}
 
-@media (min-width: 1024px) {
-  .contactButtonWrapper {
-    display: block;
+  .navbar.scrolled .logoImage {
+    width: 65px;
+    height: 65px;
   }
 }

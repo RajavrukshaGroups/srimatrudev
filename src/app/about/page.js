@@ -6,17 +6,20 @@ import Footer from "../_components/footer/page";
 import About from "../_components/about-comp/page";
 import AboutUs from "../aboutus/page";
 import WhyChooseUs from "../_components/whychooseus/page";
+import styles from "./about.module.css";
 export default function aboutUs() {
-  let pageTitle = "About Us";
+  let pageTitle = "Crafting Landmarks with Passion";
   return (
-    <div>
-      <Header />
-      <NavBar />
-      <PageTitle title={pageTitle} />
-      <About />
-      {/* <WhyChooseUs /> */}
-      {/* <AboutUs /> */}
-      <Footer />
+    <div className={styles.homeContainer}>
+      <div className={styles.backgroundOverlay}>
+        {/* <Header /> */}
+        <NavBar />
+        <PageTitle title={pageTitle} />
+        <About />
+        {/* <WhyChooseUs /> */}
+        {/* <AboutUs /> */}
+        <Footer />
+      </div>
     </div>
   );
 }

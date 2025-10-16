@@ -1,6 +1,7 @@
 "use client";
 import { useState, useEffect } from "react";
 import Link from "next/link";
+import Image from "next/image";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBars } from "@fortawesome/free-solid-svg-icons";
 import styles from "./navbar.module.css";
@@ -9,85 +10,84 @@ const NavBar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isModalOpen, setIsModalOpen] = useState(false);
 
-  const handleScroll = () => {
-    setIsScrolled(window.scrollY > 50);
-  };
-
-  const toggleModal = () => {
-    setIsModalOpen((prevState) => !prevState);
-  };
-
   useEffect(() => {
+    const handleScroll = () => setIsScrolled(window.scrollY > 50);
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
+  const toggleModal = () => setIsModalOpen((s) => !s);
+
   return (
     <>
-      <div className={`${styles.navbar} ${isScrolled ? styles.scrolled : ""}`}>
-        <h1 className="text-3xl uppercase">
-          <span style={{ color: "#349134" }}>SRI</span> MATRU DEVELOPERS
-        </h1>
+      <header
+        className={`${styles.navbar} ${isScrolled ? styles.scrolled : ""}`}
+      >
+        {/* LEFT: Logo at extreme left */}
+        <div className={styles.leftLogo}>
+          <Link href="/" className={styles.logoLink} aria-label="Home">
+            <Image
+              src="/logo.png"
+              alt="Sri Matru Developers"
+              width={140}
+              height={140}
+              className={styles.logoImage}
+              priority
+            />
+          </Link>
+        </div>
 
-        <button className={styles.hamburgerButton} onClick={toggleModal}>
-          <FontAwesomeIcon icon={faBars} />
-        </button>
-        <div className={styles.navLinks}>
-          <Link href="/">Home</Link>
+        {/* CENTER: main nav links */}
+        <nav className={styles.centerNav} aria-label="Primary Navigation">
+          <Link href='/'>Home</Link>
           <Link href="/about">About Us</Link>
           <Link href="/projects">Projects</Link>
-        </div>
-        <div className={styles.contactButtonWrapper}>
-          <button className={styles.button}>
-            <Link
-              href="/contact"
-              style={{ textDecoration: "none", color: "inherit" }}
-            >
-              Contact Us
-            </Link>
+        </nav>
+
+        {/* RIGHT: contact + hamburger */}
+        <div className={styles.rightGroup}>
+          <Link href="/contact" className={styles.contactLink}>
+            Contact
+          </Link>
+
+          <button
+            className={styles.hamburgerButton}
+            onClick={toggleModal}
+            aria-label="Open menu"
+          >
+            <FontAwesomeIcon icon={faBars} />
           </button>
         </div>
-      </div>
+      </header>
 
-      {/* Modal for mobile navigation */}
+      {/* Mobile modal/nav */}
       {isModalOpen && (
-        <div
-          className={`${styles.modal} ${isModalOpen ? styles.open : ""}`}
-          onClick={toggleModal}
-        >
+        <div className={styles.modal} onClick={toggleModal}>
           <div
             className={styles.modalContent}
             onClick={(e) => e.stopPropagation()}
           >
-            <div className={styles.displayNav}>
-              <div className={styles.indDiv}>
-                <div className={styles.indLink}>
-                  <Link href="/" onClick={toggleModal}>
-                    Home
-                  </Link>
-                </div>
-                <div className={styles.indLink}>
-                  <Link href="/projects" onClick={toggleModal}>
-                    Projects
-                  </Link>
-                </div>
-                <div className={styles.indLink}>
-                  <Link href="/about" onClick={toggleModal}>
-                    About Us
-                  </Link>
-                </div>
-                <div className={styles.indLink}>
-                  <Link href="/contact" onClick={toggleModal}>
-                    Contact Us
-                  </Link>
-                </div>
-              </div>
-              <div className={styles.closeButtonDiv}>
-                <button className={styles.closeButton} onClick={toggleModal}>
-                  &times;
-                </button>
-              </div>
+            <div className={styles.modalLinks}>
+              <Link href="/" onClick={toggleModal}>
+                Home
+              </Link>
+              <Link href="/about" onClick={toggleModal}>
+                About Us
+              </Link>
+              <Link href="/projects" onClick={toggleModal}>
+                Projects
+              </Link>
+              <Link href="/contact" onClick={toggleModal}>
+                Contact
+              </Link>
             </div>
+            <button
+              className={styles.closeButton}
+              onClick={toggleModal}
+              aria-label="Close menu"
+            >
+              &times;
+            </button>
           </div>
         </div>
       )}
